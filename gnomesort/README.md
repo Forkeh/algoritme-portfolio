@@ -15,10 +15,10 @@ https://en.wikipedia.org/wiki/Gnome_sort
    i = 0
    while i < arr.length:
        if (i == 0 or a[i] >= a[i-1]):
-           i := i + 1
+           i++
        else:
            swap a[i] and a[i-1]
-           i := i - 1
+           i--
 ``` 
 
 ## Tidskompleksiten
