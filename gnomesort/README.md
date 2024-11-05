@@ -27,5 +27,5 @@ Tidskompleksiten er generelt O(n<sup>2</sup>)
 
 Dette array:
 `[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]`
-Vil tage O(n<sup>2</sup>), altså 10*10 = 100 iterationer.
+Vil tage O(n<sup>2</sup>), altså 10*10 = 100 iterationer, da den skal køre frem og tilbage med hvert eneste element.
     
