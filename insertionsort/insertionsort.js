@@ -18,4 +18,31 @@ function insertionSortShift(arr) {
     return arr;
 }
 
-export { insertionSortShift };
+function insertionSortSwap(arr) {
+    let iterations = 0;
+    // Start checking from index 1 (as we are checking elements to the left)
+    for (let i = 1; i < arr.length; i++) {
+        let j = i;
+
+        // Keeps going left and swapping, while left value is larger
+        while (j > 0 && arr[j] < arr[j - 1]) {
+            swap(j, j - 1); // Swaps values at indexes
+            j--; // Decrement to re-select value we just swapped for next loop
+            iterations++;
+
+            // console.log("iteration: ", iterations, arr);
+        }
+    }
+
+    return arr;
+
+    function swap(indexA, indexB) {
+        // console.log("SWAP Index", indexA, indexB);
+        // console.log("A", arr[indexA]);
+        // console.log("B", arr[indexB]);
+
+        [arr[indexA], arr[indexB]] = [arr[indexB], arr[indexA]];
+    }
+}
+
+export { insertionSortShift, insertionSortSwap };
